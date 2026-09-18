@@ -3,10 +3,17 @@
 //   return <button style={{ color: props.color }}>{props.text}</button>;
 // };
 
-const Button = ({ children, text, color = "black" }) => {
+const Button = ({ text, color = "black", children }) => {
   console.log(children);
+  const onClickButton = () => {
+    console.log(text);
+  };
   return (
-    <button style={{ color: color }}>
+    <button
+      // 이벤트를 실질적으로 처리하는 함수여서 이벤트 핸들러이다.
+      onClick={onClickButton}
+      style={{ color: color }}
+    >
       {text} - {color.toUpperCase()}
       {children}
     </button>
