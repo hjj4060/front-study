@@ -21,7 +21,12 @@ function App() {
 
   return (
     <>
-      <Button />
+      <Button
+        text={"123"}
+        onClick={() => {
+          console.log("123번 버튼 클릭!");
+        }}
+      />
       <div>
         <Link to={"/"}>Home</Link>
         <Link to={"/new"}>New</Link>
